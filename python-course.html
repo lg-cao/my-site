@@ -23,11 +23,11 @@
         <div class="container">
             <ul>
                 <li><a href="python-course.html#home">首页</a></li>
-                <li><a href="python-course.html#syntax">基础语法</a></li>
-                <li><a href="python-course.html#data-structures">数据结构</a></li>
-                <li><a href="python-course.html#functions">函数与模块</a></li>
+                <li><a href="python-course.html#core-syntax">极简核心语法与数据流转</a></li>
                 <li><a href="python-course.html#oop">面向对象编程</a></li>
-                <li><a href="python-course.html#file-handling">文件操作与异常处理</a></li>
+                <li><a href="python-course.html#data-science">数据科学三剑客</a></li>
+                <li><a href="python-course.html#engineering">工程化与模块化思维</a></li>
+                <li><a href="python-course.html#learning-method">AI时代的高效学习法</a></li>
                 <li><a href="python-course.html#resources">课程资源</a></li>
                 <li><a href="index.html">返回个人主页</a></li>
             </ul>
@@ -37,111 +37,49 @@
     <main>
         <section id="home" class="section">
             <div class="container">
-                <h2>Python基础课程</h2>
+                <h2>Python基础课程 - AI时代版</h2>
                 <div class="content">
-                    <p>本课程旨在帮助初学者快速掌握Python编程基础，为数据分析和其他领域的学习打下坚实的基础。课程内容专注于基础编程素养，包括Python语法、数据结构、函数、面向对象编程、文件操作与异常处理等核心概念。</p>
-                    <p>通过本课程的学习，您将掌握Python编程的基本技能，为后续的数据分析、机器学习等高级主题学习做好准备。</p>
+                    <p>在AI编程工具（如Cursor、GitHub Copilot等）日益成熟的今天，学习Python基础的重点必须从"死记硬背语法"转向"理解核心逻辑与数据流转"。AI可以瞬间生成几十行代码，但你需要具备读懂、调试、重构和组合这些代码的能力。</p>
+                    <p>本课程剔除了传统课程中陈旧且极少手动编写的部分，将精力集中在四大核心模块与一种新时代学习法上，帮助你在AI时代快速掌握Python编程基础。</p>
                     
                     <h3>课程目标</h3>
                     <ul class="resource-list">
                         <li>
-                            <h4>掌握基础编程素养</h4>
-                            <p>理解编程的基本概念和思维方式</p>
+                            <h4>理解核心逻辑与数据流转</h4>
+                            <p>能够读懂AI生成的代码，理解程序的执行逻辑和数据流动</p>
                         </li>
                         <li>
-                            <h4>熟练使用Python语法</h4>
-                            <p>掌握Python的基本语法和常用数据结构</p>
+                            <h4>掌握AI时代必备的Python技能</h4>
+                            <p>专注于AI时代最常用的Python特性和工具</p>
                         </li>
                         <li>
-                            <h4>具备解决实际问题的能力</h4>
-                            <p>能够使用Python编写简单的程序解决实际问题</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section id="syntax" class="section">
-            <div class="container">
-                <h2>Python基础语法</h2>
-                <div class="content">
-                    <p>Python基础语法是学习Python编程的第一步，包括变量、数据类型、运算符、控制流等基本概念。</p>
-                    
-                    <h3>学习要点</h3>
-                    <ul class="resource-list">
-                        <li>
-                            <h4>变量定义</h4>
-                            <p>如何在Python中定义和使用变量</p>
-                        </li>
-                        <li>
-                            <h4>数据类型</h4>
-                            <p>整数、浮点数、字符串、布尔值等基本数据类型</p>
-                        </li>
-                        <li>
-                            <h4>运算符</h4>
-                            <p>算术运算符、比较运算符、逻辑运算符</p>
-                        </li>
-                        <li>
-                            <h4>控制流</h4>
-                            <p>if语句、for循环、while循环</p>
+                            <h4>具备与AI协作的能力</h4>
+                            <p>能够用自然语言指挥AI，并精准验证其产出</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
         
-        <section id="data-structures" class="section">
+        <section id="core-syntax" class="section">
             <div class="container">
-                <h2>数据结构</h2>
+                <h2>1. 极简核心语法与数据流转</h2>
                 <div class="content">
-                    <p>Python提供了多种内置的数据结构，如列表、元组、字典、集合等，这些数据结构是Python编程的重要组成部分。</p>
+                    <p>AI生成的代码往往使用了Python的特性，你需要能迅速看懂其逻辑走向，而不是被语法卡住。</p>
                     
                     <h3>学习要点</h3>
                     <ul class="resource-list">
                         <li>
-                            <h4>列表 (List)</h4>
-                            <p>可变序列，支持增删改查操作</p>
+                            <h4>变量与控制流</h4>
+                            <p>理解赋值、条件分支（if-else）与循环（for/while），这决定了程序的执行逻辑</p>
                         </li>
                         <li>
-                            <h4>元组 (Tuple)</h4>
-                            <p>不可变序列，适合存储不可修改的数据</p>
+                            <h4>核心容器：列表与字典</h4>
+                            <p>列表适合存储序列数据（如训练的Loss历史），字典适合存储带标签的配置数据（如模型的超参数）。掌握增删改查即可，无需在元组、集合的冷门操作上耗时</p>
                         </li>
                         <li>
-                            <h4>字典 (Dictionary)</h4>
-                            <p>键值对结构，适合存储映射关系</p>
-                        </li>
-                        <li>
-                            <h4>集合 (Set)</h4>
-                            <p>无序不重复元素集合，支持集合运算</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section id="functions" class="section">
-            <div class="container">
-                <h2>函数与模块</h2>
-                <div class="content">
-                    <p>函数是Python编程的重要组成部分，它允许我们将代码组织成可重用的块。模块则允许我们将代码组织成更大的单元。</p>
-                    
-                    <h3>学习要点</h3>
-                    <ul class="resource-list">
-                        <li>
-                            <h4>函数定义与调用</h4>
-                            <p>如何定义和调用函数</p>
-                        </li>
-                        <li>
-                            <h4>参数类型</h4>
-                            <p>位置参数、默认参数、可变参数</p>
-                        </li>
-                        <li>
-                            <h4>返回值</h4>
-                            <p>函数如何返回结果</p>
-                        </li>
-                        <li>
-                            <h4>模块导入与使用</h4>
-                            <p>如何导入和使用Python模块</p>
+                            <h4>推导式</h4>
+                            <p>能读懂AI常用的一行代码生成列表或字典的简写逻辑</p>
                         </li>
                     </ul>
                 </div>
@@ -150,56 +88,90 @@
         
         <section id="oop" class="section">
             <div class="container">
-                <h2>面向对象编程</h2>
+                <h2>2. 面向对象编程</h2>
                 <div class="content">
-                    <p>面向对象编程是一种编程范式，它将数据和操作数据的方法组织成对象。Python是一种面向对象的编程语言。</p>
+                    <p>很多初学者认为只需写脚本，不需要懂面向对象，但这在AI时代是致命的。因为每一个神经网络模型，本质上都是一个类。</p>
                     
                     <h3>学习要点</h3>
                     <ul class="resource-list">
                         <li>
-                            <h4>类的定义</h4>
-                            <p>如何定义一个类</p>
+                            <h4>类与对象</h4>
+                            <p>理解如何定义类、实例化对象</p>
                         </li>
                         <li>
-                            <h4>对象的创建</h4>
-                            <p>如何创建类的实例</p>
-                        </li>
-                        <li>
-                            <h4>属性与方法</h4>
-                            <p>类的属性和方法的定义与使用</p>
-                        </li>
-                        <li>
-                            <h4>继承与多态</h4>
-                            <p>类的继承和多态特性</p>
+                            <h4>核心方法 __init__ 与普通方法</h4>
+                            <p>在深度学习框架（如PyTorch）中，__init__ 是造零件（定义网络层）的地方，而类似 forward 的方法则是拼装零件（前向传播）的地方</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
         
-        <section id="file-handling" class="section">
+        <section id="data-science" class="section">
             <div class="container">
-                <h2>文件操作与异常处理</h2>
+                <h2>3. 数据科学三剑客</h2>
                 <div class="content">
-                    <p>文件操作是Python编程中常见的任务，而异常处理则是保证程序健壮性的重要手段。</p>
+                    <p>这是Python在AI和数据领域被称为"胶水语言"的真正原因，也是你与AI协作时的主要工作区域。传统课程常把这部分放在后面，但现在应该前置为核心基础。</p>
                     
                     <h3>学习要点</h3>
                     <ul class="resource-list">
                         <li>
-                            <h4>文件打开与关闭</h4>
-                            <p>如何打开和关闭文件</p>
+                            <h4>NumPy（算得快）</h4>
+                            <p>理解N维数组及其"广播机制"（如直接对矩阵乘以标量，无需写循环），以及维度变换（reshape）。AI中的图像、文本最终都是NumPy矩阵</p>
                         </li>
                         <li>
-                            <h4>文件读取与写入</h4>
-                            <p>如何读取和写入文件内容</p>
+                            <h4>Pandas（读得快/洗得净）</h4>
+                            <p>掌握DataFrame结构。AI应用90%的时间在清洗数据，你需要能用Pandas读取CSV、处理缺失值（fillna）、筛选数据</p>
                         </li>
                         <li>
-                            <h4>异常捕获与处理</h4>
-                            <p>如何捕获和处理异常</p>
+                            <h4>Matplotlib（看得清）</h4>
+                            <p>能画出Loss曲线、数据分布图。不画图，训练AI就像盲人摸象，无法判断模型是否学傻了（过拟合）</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="engineering" class="section">
+            <div class="container">
+                <h2>4. 工程化与模块化思维</h2>
+                <div class="content">
+                    <p>AI通常给你代码片段，你需要把它们组装成可运行的项目。</p>
+                    
+                    <h3>学习要点</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <h4>函数与模块</h4>
+                            <p>理解参数传递、返回值，以及如何 import 调用第三方库和自定义模块</p>
                         </li>
                         <li>
-                            <h4>with语句的使用</h4>
-                            <p>如何使用with语句简化文件操作</p>
+                            <h4>文件I/O与异常处理</h4>
+                            <p>掌握读取CSV/JSON文件，以及用 try-except 捕获异常。当AI代码因数据格式问题报错时，异常处理是你定位Bug的利器</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="learning-method" class="section">
+            <div class="container">
+                <h2>5. 顺应AI时代的高效学习法</h2>
+                <div class="content">
+                    <p>不浪费时间的关键不仅在于"学什么"，更在于"怎么学"。</p>
+                    
+                    <h3>学习要点</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <h4>案例优先与模仿修改</h4>
+                            <p>摒弃先啃厚书再写代码的传统路径。直接让AI生成一个你感兴趣的小项目（如电商销售分析），通过"看大概 -> 精读 -> 找差距 -> 模仿修改"的流程来学习</p>
+                        </li>
+                        <li>
+                            <h4>反向学习法</h4>
+                            <p>先学Pandas等工具跑出结果，遇到不懂的统计概念（如四分位数）再去补理论，而不是先啃完统计学再来敲代码</p>
+                        </li>
+                        <li>
+                            <h4>可视化辅助理解</h4>
+                            <p>遇到难以理解的内存分配或执行逻辑，使用 pythontutor.com 等工具将代码执行过程图形化，这比单纯看文字效率高十倍</p>
                         </li>
                     </ul>
                 </div>
@@ -219,8 +191,8 @@
                             <p>适合初学者的Python入门书籍</p>
                         </li>
                         <li>
-                            <h4>《Python核心编程》</h4>
-                            <p>更深入的Python编程指南</p>
+                            <h4>《Python for Data Analysis》</h4>
+                            <p>数据科学方向的Python应用指南</p>
                         </li>
                     </ul>
                     
@@ -231,28 +203,28 @@
                             <p>最权威的Python参考资料</p>
                         </li>
                         <li>
-                            <h4>菜鸟教程</h4>
-                            <p>中文Python学习资源</p>
+                            <h4>pythontutor.com</h4>
+                            <p>代码执行过程可视化工具</p>
                         </li>
                         <li>
-                            <h4>W3School</h4>
-                            <p>交互式Python学习平台</p>
+                            <h4>Kaggle</h4>
+                            <p>数据科学实践平台，有大量真实数据集和案例</p>
                         </li>
                     </ul>
                     
                     <h3>实践项目</h3>
                     <ul class="resource-list">
                         <li>
-                            <h4>计算器</h4>
-                            <p>实现一个简单的计算器程序</p>
+                            <h4>电商销售数据分析</h4>
+                            <p>使用Pandas分析销售数据，用Matplotlib可视化结果</p>
                         </li>
                         <li>
-                            <h4>猜数字游戏</h4>
-                            <p>实现一个猜数字游戏</p>
+                            <h4>简单线性回归模型</h4>
+                            <p>使用NumPy实现简单的线性回归模型</p>
                         </li>
                         <li>
-                            <h4>简单爬虫</h4>
-                            <p>使用Python实现一个简单的网络爬虫</p>
+                            <h4>数据清洗工具</h4>
+                            <p>编写一个脚本，使用Pandas处理和清洗CSV数据</p>
                         </li>
                     </ul>
                 </div>
