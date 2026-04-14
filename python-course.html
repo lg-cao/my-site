@@ -65,23 +65,161 @@
             <div class="container">
                 <h2>1. 极简核心语法与数据流转</h2>
                 <div class="content">
-                    <p>AI生成的代码往往使用了Python的特性，你需要能迅速看懂其逻辑走向，而不是被语法卡住。</p>
+                    <p>AI生成的代码往往使用了Python的特性，你需要能迅速看懂其逻辑走向，而不是被语法卡住。本单元将帮助你掌握Python的核心语法，为后续学习打下基础。</p>
                     
-                    <h3>学习要点</h3>
-                    <ul class="resource-list">
-                        <li>
-                            <h4>变量与控制流</h4>
-                            <p>理解赋值、条件分支（if-else）与循环（for/while），这决定了程序的执行逻辑</p>
-                        </li>
-                        <li>
-                            <h4>核心容器：列表与字典</h4>
-                            <p>列表适合存储序列数据（如训练的Loss历史），字典适合存储带标签的配置数据（如模型的超参数）。掌握增删改查即可，无需在元组、集合的冷门操作上耗时</p>
-                        </li>
-                        <li>
-                            <h4>推导式</h4>
-                            <p>能读懂AI常用的一行代码生成列表或字典的简写逻辑</p>
-                        </li>
-                    </ul>
+                    <h3>1.1 变量与控制流</h3>
+                    <p>变量是存储数据的容器，控制流决定了程序的执行顺序。</p>
+                    
+                    <h4>1.1.1 变量</h4>
+                    <p>在Python中，变量的定义非常简单，直接赋值即可：</p>
+                    <pre><code># 定义变量
+name = "Alice"
+age = 25
+height = 1.65
+is_student = True
+
+# 打印变量
+print(name)    # 输出: Alice
+print(age)     # 输出: 25
+print(height)  # 输出: 1.65
+print(is_student)  # 输出: True</code></pre>
+                    
+                    <h4>1.1.2 条件分支（if-else）</h4>
+                    <p>条件分支用于根据不同的条件执行不同的代码：</p>
+                    <pre><code># 条件分支示例
+score = 85
+
+if score >= 90:
+    print("优秀")
+elif score >= 80:
+    print("良好")
+elif score >= 60:
+    print("及格")
+else:
+    print("不及格")
+
+# 输出: 良好</code></pre>
+                    
+                    <h4>1.1.3 循环</h4>
+                    <p>循环用于重复执行一段代码：</p>
+                    <pre><code># for循环示例
+fruits = ["苹果", "香蕉", "橙子"]
+for fruit in fruits:
+    print(f"我喜欢吃{fruit}")
+
+# 输出:
+# 我喜欢吃苹果
+# 我喜欢吃香蕉
+# 我喜欢吃橙子
+
+# while循环示例
+count = 1
+while count <= 5:
+    print(f"计数: {count}")
+    count += 1
+
+# 输出:
+# 计数: 1
+# 计数: 2
+# 计数: 3
+# 计数: 4
+# 计数: 5</code></pre>
+                    
+                    <h3>1.2 核心容器：列表与字典</h3>
+                    <p>列表和字典是Python中最常用的数据结构，也是AI代码中最常见的。</p>
+                    
+                    <h4>1.2.1 列表（List）</h4>
+                    <p>列表用于存储有序的序列数据：</p>
+                    <pre><code># 定义列表
+numbers = [1, 2, 3, 4, 5]
+
+# 访问元素
+print(numbers[0])  # 输出: 1（注意：Python从0开始计数）
+print(numbers[-1])  # 输出: 5（负数索引从末尾开始）
+
+# 添加元素
+numbers.append(6)
+print(numbers)  # 输出: [1, 2, 3, 4, 5, 6]
+
+# 修改元素
+numbers[0] = 10
+print(numbers)  # 输出: [10, 2, 3, 4, 5, 6]
+
+# 删除元素
+numbers.remove(3)
+print(numbers)  # 输出: [10, 2, 4, 5, 6]
+
+# 切片操作
+print(numbers[1:3])  # 输出: [2, 4]（从索引1到2，不包含3）</code></pre>
+                    
+                    <h4>1.2.2 字典（Dictionary）</h4>
+                    <p>字典用于存储键值对数据：</p>
+                    <pre><code># 定义字典
+student = {
+    "name": "Bob",
+    "age": 20,
+    "major": "计算机科学",
+    "grades": {"数学": 90, "英语": 85}
+}
+
+# 访问元素
+print(student["name"])  # 输出: Bob
+print(student["grades"]["数学"])  # 输出: 90
+
+# 添加/修改元素
+student["gender"] = "男"
+student["age"] = 21
+print(student)  # 输出包含新的gender键和更新后的age值
+
+# 删除元素
+del student["major"]
+print(student)  # 输出不包含major键
+
+# 遍历字典
+for key, value in student.items():
+    print(f"{key}: {value}")</code></pre>
+                    
+                    <h3>1.3 推导式</h3>
+                    <p>推导式是Python的一种简洁语法，用于快速生成列表或字典：</p>
+                    
+                    <h4>1.3.1 列表推导式</h4>
+                    <pre><code># 基本列表推导式
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # 输出: [1, 4, 9, 16, 25]
+
+# 带条件的列表推导式
+even_numbers = [x for x in range(1, 11) if x % 2 == 0]
+print(even_numbers)  # 输出: [2, 4, 6, 8, 10]
+
+# 嵌套列表推导式
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened = [num for row in matrix for num in row]
+print(flattened)  # 输出: [1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+                    
+                    <h4>1.3.2 字典推导式</h4>
+                    <pre><code># 基本字典推导式
+numbers = [1, 2, 3, 4, 5]
+square_dict = {x: x**2 for x in numbers}
+print(square_dict)  # 输出: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+# 带条件的字典推导式
+even_squares = {x: x**2 for x in numbers if x % 2 == 0}
+print(even_squares)  # 输出: {2: 4, 4: 16}</code></pre>
+                    
+                    <h3>1.4 实践练习</h3>
+                    <p>尝试完成以下练习，巩固本单元所学内容：</p>
+                    
+                    <h4>练习1：温度转换</h4>
+                    <p>编写一个程序，将摄氏度转换为华氏度。公式：华氏度 = 摄氏度 × 9/5 + 32</p>
+                    
+                    <h4>练习2：计算列表平均值</h4>
+                    <p>编写一个程序，计算列表中所有数字的平均值。</p>
+                    
+                    <h4>练习3：学生成绩管理</h4>
+                    <p>使用字典存储学生信息（姓名、年龄、各科成绩），并编写函数计算学生的平均成绩。</p>
+                    
+                    <h4>练习4：使用推导式</h4>
+                    <p>使用列表推导式生成1-100之间的所有偶数，并使用字典推导式创建一个映射，将每个偶数映射到其平方值。</p>
                 </div>
             </div>
         </section>
