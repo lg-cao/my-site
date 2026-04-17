@@ -6,6 +6,13 @@
     <title>Python基础课程 - 学习站点</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.2/lib/codemirror.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.2/theme/monokai.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.2/lib/codemirror.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.2/mode/python/python.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.2/addon/edit/matchbrackets.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.2/addon/edit/closebrackets.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.20.0/full/pyodide.js"></script>
 </head>
 <body>
     <header>
@@ -72,7 +79,17 @@
                     
                     <h4>1.1.1 变量</h4>
                     <p>在Python中，变量的定义非常简单，直接赋值即可：</p>
-                    <pre><code># 定义变量
+                    <div class="code-editor">
+                        <div class="code-header">
+                            <h4>变量示例</h4>
+                            <div class="code-controls">
+                                <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
+                            </div>
+                        </div>
+                        <div class="code-container">
+                            <textarea>
+# 定义变量
 name = "Alice"
 age = 25
 height = 1.65
@@ -82,11 +99,25 @@ is_student = True
 print(name)    # 输出: Alice
 print(age)     # 输出: 25
 print(height)  # 输出: 1.65
-print(is_student)  # 输出: True</code></pre>
+print(is_student)  # 输出: True
+                            </textarea>
+                        </div>
+                        <div class="code-output"></div>
+                    </div>
                     
                     <h4>1.1.2 条件分支（if-else）</h4>
                     <p>条件分支用于根据不同的条件执行不同的代码：</p>
-                    <pre><code># 条件分支示例
+                    <div class="code-editor">
+                        <div class="code-header">
+                            <h4>条件分支示例</h4>
+                            <div class="code-controls">
+                                <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
+                            </div>
+                        </div>
+                        <div class="code-container">
+                            <textarea>
+# 条件分支示例
 score = 85
 
 if score >= 90:
@@ -98,11 +129,25 @@ elif score >= 60:
 else:
     print("不及格")
 
-# 输出: 良好</code></pre>
+# 输出: 良好
+                            </textarea>
+                        </div>
+                        <div class="code-output"></div>
+                    </div>
                     
                     <h4>1.1.3 循环</h4>
                     <p>循环用于重复执行一段代码：</p>
-                    <pre><code># for循环示例
+                    <div class="code-editor">
+                        <div class="code-header">
+                            <h4>循环示例</h4>
+                            <div class="code-controls">
+                                <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
+                            </div>
+                        </div>
+                        <div class="code-container">
+                            <textarea>
+# for循环示例
 fruits = ["苹果", "香蕉", "橙子"]
 for fruit in fruits:
     print(f"我喜欢吃{fruit}")
@@ -123,14 +168,28 @@ while count <= 5:
 # 计数: 2
 # 计数: 3
 # 计数: 4
-# 计数: 5</code></pre>
+# 计数: 5
+                            </textarea>
+                        </div>
+                        <div class="code-output"></div>
+                    </div>
                     
                     <h3>1.2 核心容器：列表与字典</h3>
                     <p>列表和字典是Python中最常用的数据结构，也是AI代码中最常见的。</p>
                     
                     <h4>1.2.1 列表（List）</h4>
                     <p>列表用于存储有序的序列数据：</p>
-                    <pre><code># 定义列表
+                    <div class="code-editor">
+                        <div class="code-header">
+                            <h4>列表示例</h4>
+                            <div class="code-controls">
+                                <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
+                            </div>
+                        </div>
+                        <div class="code-container">
+                            <textarea>
+# 定义列表
 numbers = [1, 2, 3, 4, 5]
 
 # 访问元素
@@ -150,11 +209,25 @@ numbers.remove(3)
 print(numbers)  # 输出: [10, 2, 4, 5, 6]
 
 # 切片操作
-print(numbers[1:3])  # 输出: [2, 4]（从索引1到2，不包含3）</code></pre>
+print(numbers[1:3])  # 输出: [2, 4]（从索引1到2，不包含3）
+                            </textarea>
+                        </div>
+                        <div class="code-output"></div>
+                    </div>
                     
                     <h4>1.2.2 字典（Dictionary）</h4>
                     <p>字典用于存储键值对数据：</p>
-                    <pre><code># 定义字典
+                    <div class="code-editor">
+                        <div class="code-header">
+                            <h4>字典示例</h4>
+                            <div class="code-controls">
+                                <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
+                            </div>
+                        </div>
+                        <div class="code-container">
+                            <textarea>
+# 定义字典
 student = {
     "name": "Bob",
     "age": 20,
@@ -177,13 +250,27 @@ print(student)  # 输出不包含major键
 
 # 遍历字典
 for key, value in student.items():
-    print(f"{key}: {value}")</code></pre>
+    print(f"{key}: {value}")
+                            </textarea>
+                        </div>
+                        <div class="code-output"></div>
+                    </div>
                     
                     <h3>1.3 推导式</h3>
                     <p>推导式是Python的一种简洁语法，用于快速生成列表或字典：</p>
                     
                     <h4>1.3.1 列表推导式</h4>
-                    <pre><code># 基本列表推导式
+                    <div class="code-editor">
+                        <div class="code-header">
+                            <h4>列表推导式示例</h4>
+                            <div class="code-controls">
+                                <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
+                            </div>
+                        </div>
+                        <div class="code-container">
+                            <textarea>
+# 基本列表推导式
 squares = [x**2 for x in range(1, 6)]
 print(squares)  # 输出: [1, 4, 9, 16, 25]
 
@@ -194,17 +281,35 @@ print(even_numbers)  # 输出: [2, 4, 6, 8, 10]
 # 嵌套列表推导式
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 flattened = [num for row in matrix for num in row]
-print(flattened)  # 输出: [1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre>
+print(flattened)  # 输出: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                            </textarea>
+                        </div>
+                        <div class="code-output"></div>
+                    </div>
                     
                     <h4>1.3.2 字典推导式</h4>
-                    <pre><code># 基本字典推导式
+                    <div class="code-editor">
+                        <div class="code-header">
+                            <h4>字典推导式示例</h4>
+                            <div class="code-controls">
+                                <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
+                            </div>
+                        </div>
+                        <div class="code-container">
+                            <textarea>
+# 基本字典推导式
 numbers = [1, 2, 3, 4, 5]
 square_dict = {x: x**2 for x in numbers}
 print(square_dict)  # 输出: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 
 # 带条件的字典推导式
 even_squares = {x: x**2 for x in numbers if x % 2 == 0}
-print(even_squares)  # 输出: {2: 4, 4: 16}</code></pre>
+print(even_squares)  # 输出: {2: 4, 4: 16}
+                            </textarea>
+                        </div>
+                        <div class="code-output"></div>
+                    </div>
                     
                     <h3>1.4 实践练习</h3>
                     <p>尝试完成以下练习，巩固本单元所学内容：</p>
@@ -377,5 +482,85 @@ print(even_squares)  # 输出: {2: 4, 4: 16}</code></pre>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // 全局变量
+        let pyodide;
+        
+        // 初始化Pyodide
+        async function initPyodide() {
+            try {
+                pyodide = await loadPyodide({
+                    indexURL: "https://cdn.jsdelivr.net/pyodide/v0.20.0/full/"
+                });
+                console.log("Pyodide initialized successfully");
+            } catch (error) {
+                console.error("Error initializing Pyodide:", error);
+            }
+        }
+        
+        // 运行Python代码
+        async function runPythonCode(code, outputElement) {
+            if (!pyodide) {
+                await initPyodide();
+            }
+            
+            try {
+                // 重定向标准输出
+                pyodide.globals.set("print", (text) => {
+                    outputElement.innerHTML += text + "<br>";
+                });
+                
+                // 运行代码
+                await pyodide.runPythonAsync(code);
+            } catch (error) {
+                outputElement.innerHTML += "Error: " + error.message + "<br>";
+            }
+        }
+        
+        // 初始化代码编辑器
+        function initCodeEditors() {
+            document.querySelectorAll('.code-editor').forEach((editorEl, index) => {
+                const textarea = editorEl.querySelector('textarea');
+                const outputEl = editorEl.querySelector('.code-output');
+                const runBtn = editorEl.querySelector('.run-btn');
+                const toggleBtn = editorEl.querySelector('.toggle-btn');
+                const codeContainer = editorEl.querySelector('.code-container');
+                
+                // 初始化CodeMirror
+                const editor = CodeMirror.fromTextArea(textarea, {
+                    mode: 'python',
+                    theme: 'monokai',
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    autoCloseBrackets: true,
+                    indentUnit: 4,
+                    tabSize: 4
+                });
+                
+                // 运行按钮点击事件
+                runBtn.addEventListener('click', async () => {
+                    const code = editor.getValue();
+                    outputEl.innerHTML = '';
+                    await runPythonCode(code, outputEl);
+                });
+                
+                // 折叠/展开按钮点击事件
+                toggleBtn.addEventListener('click', () => {
+                    codeContainer.classList.toggle('collapsed');
+                    if (codeContainer.classList.contains('collapsed')) {
+                        toggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    } else {
+                        toggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    }
+                });
+            });
+        }
+        
+        // 页面加载完成后初始化
+        window.addEventListener('load', async () => {
+            await initPyodide();
+            initCodeEditors();
+        });
+    </script>
 </body>
 </html>
