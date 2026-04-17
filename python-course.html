@@ -84,6 +84,7 @@
                             <h4>变量示例</h4>
                             <div class="code-controls">
                                 <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="reset-btn"><i class="fas fa-redo"></i> 重置</button>
                                 <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
                             </div>
                         </div>
@@ -112,6 +113,7 @@ print(is_student)  # 输出: True
                             <h4>条件分支示例</h4>
                             <div class="code-controls">
                                 <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="reset-btn"><i class="fas fa-redo"></i> 重置</button>
                                 <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
                             </div>
                         </div>
@@ -142,6 +144,7 @@ else:
                             <h4>循环示例</h4>
                             <div class="code-controls">
                                 <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="reset-btn"><i class="fas fa-redo"></i> 重置</button>
                                 <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
                             </div>
                         </div>
@@ -184,6 +187,7 @@ while count <= 5:
                             <h4>列表示例</h4>
                             <div class="code-controls">
                                 <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="reset-btn"><i class="fas fa-redo"></i> 重置</button>
                                 <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
                             </div>
                         </div>
@@ -222,6 +226,7 @@ print(numbers[1:3])  # 输出: [2, 4]（从索引1到2，不包含3）
                             <h4>字典示例</h4>
                             <div class="code-controls">
                                 <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="reset-btn"><i class="fas fa-redo"></i> 重置</button>
                                 <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
                             </div>
                         </div>
@@ -265,6 +270,7 @@ for key, value in student.items():
                             <h4>列表推导式示例</h4>
                             <div class="code-controls">
                                 <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="reset-btn"><i class="fas fa-redo"></i> 重置</button>
                                 <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
                             </div>
                         </div>
@@ -293,6 +299,7 @@ print(flattened)  # 输出: [1, 2, 3, 4, 5, 6, 7, 8, 9]
                             <h4>字典推导式示例</h4>
                             <div class="code-controls">
                                 <button class="run-btn"><i class="fas fa-play"></i> 运行</button>
+                                <button class="reset-btn"><i class="fas fa-redo"></i> 重置</button>
                                 <button class="toggle-btn"><i class="fas fa-chevron-up"></i></button>
                             </div>
                         </div>
@@ -523,8 +530,12 @@ print(even_squares)  # 输出: {2: 4, 4: 16}
                 const textarea = editorEl.querySelector('textarea');
                 const outputEl = editorEl.querySelector('.code-output');
                 const runBtn = editorEl.querySelector('.run-btn');
+                const resetBtn = editorEl.querySelector('.reset-btn');
                 const toggleBtn = editorEl.querySelector('.toggle-btn');
                 const codeContainer = editorEl.querySelector('.code-container');
+                
+                // 存储原始代码
+                const originalCode = textarea.value;
                 
                 // 初始化CodeMirror
                 const editor = CodeMirror.fromTextArea(textarea, {
@@ -542,6 +553,12 @@ print(even_squares)  # 输出: {2: 4, 4: 16}
                     const code = editor.getValue();
                     outputEl.innerHTML = '';
                     await runPythonCode(code, outputEl);
+                });
+                
+                // 重置按钮点击事件
+                resetBtn.addEventListener('click', () => {
+                    editor.setValue(originalCode);
+                    outputEl.innerHTML = '';
                 });
                 
                 // 折叠/展开按钮点击事件
